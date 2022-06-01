@@ -16,12 +16,12 @@ class ContactList:
                 del self.list_name[x]
                 break
     
-    def find_shared_contact(self, ContactList):
+    def find_shared_contact(self, other_contact_list):
         contacts_in_common = []
-        for i in range(0, len(ContactList.list_name)):
+        for i in range(0, len(other_contact_list.list_name)):
             for x in range(0, len(self.list_name)):
-                if ContactList.list_name[i]["name"] == self.list_name[x]["name"] and ContactList.list_name[i]["number"] == self.list_name[x]["number"]:
-                    contacts_in_common.append(ContactList.list_name[i])
+                if other_contact_list.list_name[i]["name"] == self.list_name[x]["name"] and other_contact_list.list_name[i]["number"] == self.list_name[x]["number"]:
+                    contacts_in_common.append(other_contact_list.list_name[i])
         return contacts_in_common
             
     
